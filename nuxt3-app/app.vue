@@ -1,6 +1,6 @@
 <template>
   <div class="text-red-500">
-    <MyHello />
+    <Articles />
   </div>
 </template>
 
