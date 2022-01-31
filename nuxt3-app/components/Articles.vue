@@ -1,13 +1,15 @@
 <template>
   <div>
-    <article class="m-4 md:w-1/2 lg:w-1/3" v-for="post in posts" :key="post.id">
-
-        <h2 class="mb-2 capitalize text-2xl font-semibold">{{ post.title }}</h2>
-      <p>{{ post.body }}...</p>
-    </article>
+    <ArticleCard
+      v-for="post in posts"
+      :key="post.id"
+      :post="post" />
   </div>
 </template>
 
 <script setup>
-    const { data : posts } = await useFetch('https://jsonplaceholder.typicode.com/posts')
+    import ArticleCard from "./ArticleCard.vue";
+    //const { data : posts } = await useFetch('https://jsonplaceholder.typicode.com/posts')
+    const  { data : {value: { data: posts } } } = await useFetch('http://localhost:8055/items/Articles')
+    console.log(posts);
 </script>
