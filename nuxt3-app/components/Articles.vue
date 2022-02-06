@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container w-100 lg:w-4/5 mx-auto flex flex-col">
     <ArticleCard
       v-for="post in posts"
       :key="post.id"
