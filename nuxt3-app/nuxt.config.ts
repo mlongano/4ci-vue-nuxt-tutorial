@@ -13,4 +13,10 @@ export default defineNuxtConfig({
             },
         },
     },
+    publicRuntimeConfig: {
+        API_BASE: '/api'
+    },
+    privateRuntimeConfig: {
+        UNSPLASH_ACCESS_KEY: process.env.UNSPLASH_ACCESS_KEY
+    },
 })
